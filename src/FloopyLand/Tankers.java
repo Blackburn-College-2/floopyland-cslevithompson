@@ -14,7 +14,7 @@ import java.awt.Point;
  */
 public class Tankers extends MyBaseHero{
     
-    public Tankers(GameBoard gameboard, Point location) {
+    public Tankers(String name, int hp, GameBoard gameboard, Point location) {
         super(gameboard,location);
     }
 }

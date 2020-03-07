@@ -6,10 +6,11 @@
 package FloopyLand;
 
 import com.pauliankline.floopyconnector.*;
+import java.awt.Point;
 
 /**
  *
- * @author paul.kline
+ * @author levi.thompson
  */
 public class runner {
 
@@ -17,9 +18,14 @@ public class runner {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Floopy floop = new Floopy(new ConcreteController());
-        //replace ConcreteController with your controller.
+        
+        
+        GameBoard myGB = new GameBoard(10,10);
+        Point p = new Point(0,0);
+        Tankers t = new Tankers("tanker", 100, myGB, p);
+        
+        Floopy floop = new Floopy(new Controller());
+        floop.gameController.getGameBoard().getGameSquare(p).addHero(t);
     }
     
 }

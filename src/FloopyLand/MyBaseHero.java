@@ -12,7 +12,7 @@ import java.awt.Point;
  *
  * @author levi.thompson
  */
-public class MyBaseHero extends BaseHero{
+public abstract class MyBaseHero extends BaseHero{
 
     public MyBaseHero(GameBoard gameboard, Point location) {
         super(gameboard,location);
